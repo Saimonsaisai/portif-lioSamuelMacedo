@@ -44,3 +44,22 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.createElement("button");
+    toggleButton.textContent = "Toggle Dark Mode";
+    document.body.appendChild(toggleButton);
+
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        header.classList.toggle("dark-mode");
+        footer.classList.toggle("dark-mode");
+        toggleButton.classList.toggle("dark-mode");
+
+        const links = document.querySelectorAll("a");
+        links.forEach(link => {
+            link.classList.toggle("dark-mode");
+        });
+    });
+});
+
