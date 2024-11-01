@@ -294,4 +294,23 @@ footer p {
     section .contato h2{
         margin-left: 50%;
     }
+    
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+}
+
+button.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+a.dark-mode {
+    color: #bb86fc; /* Cor para links no modo escuro */
+}
+
   }
